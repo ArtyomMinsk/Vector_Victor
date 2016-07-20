@@ -38,3 +38,6 @@ def dot(vector_1, vector_2):
 
 def vector_multiply(vector, number):
     return [vector[index] * number for index in range(len(vector))]
+
+def vector_mean(*args):
+    return [sum(value) / len(value) for value in zip(*args)]
