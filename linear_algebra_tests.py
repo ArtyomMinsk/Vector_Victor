@@ -70,10 +70,10 @@ def test_vector_sum():
     assert vector_sum(v, w, u, y, z) == [12, 26, 35]
 
 
-# @raises(ShapeError)
-# def test_vector_sum_checks_shapes():
-#     """Shape rule: the vectors must be the same size."""
-#     vector_sum(v, w, m, y)
+@raises(ShapeError)
+def test_vector_sum_checks_shapes():
+    """Shape rule: the vectors must be the same size."""
+    vector_sum(v, w, m, y)
 
 
 def test_dot():
@@ -81,9 +81,9 @@ def test_dot():
     dot([a b], [c d])   = a * c + b * d
     dot(Vector, Vector) = Scalar
     """
-    #assert dot(w, y) == 160
+    assert dot(w, y) == 160
     assert dot(m, n) == 15
-    # assert dot(u, z) == 0
+    assert dot(u, z) == 0
 
 
 # @raises(ShapeError)
