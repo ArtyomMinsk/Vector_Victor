@@ -30,5 +30,11 @@ def compare_shapes(*args):
     return len(set([shape(item) for item in args])) == 1
 
 def dot(vector_1, vector_2):
-    num_sum = [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
-    return sum(num_sum)
+    if not compare_shapes(vector_1, vector_2):
+        raise ShapeError
+    else:
+        num_sum = [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
+        return sum(num_sum)
+
+def vector_multiply(vector, number):
+    return [vector[index] * number for index in range(len(vector))]
