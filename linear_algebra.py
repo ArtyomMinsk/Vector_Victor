@@ -59,3 +59,6 @@ def magnitude(vector):
 def check_matrix_shape(matrix):
     if type(matrix[0]) == list:
         return True
+
+def matrix_row(matrix, index):
+    return matrix[index]

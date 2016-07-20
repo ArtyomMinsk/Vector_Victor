@@ -147,21 +147,21 @@ def test_shape_matrices():
     assert shape(A) == (3, 3)
     assert shape(C) == (3, 2)
     assert shape(D) == (2, 3)
-#
-#
-# def test_matrix_row():
-#     """
-#            0 1  <- rows
-#        0 [[a b]]
-#        1 [[c d]]
-#        ^
-#      columns
-#     """
-#     assert matrix_row(A, 0) == [1, 0, 0]
-#     assert matrix_row(B, 1) == [4, 5, 6]
-#     assert matrix_row(C, 2) == [1, 2]
-#
-#
+
+
+def test_matrix_row():
+    """
+           0 1  <- rows
+       0 [[a b]]
+       1 [[c d]]
+       ^
+     columns
+    """
+    assert matrix_row(A, 0) == [1, 0, 0]
+    assert matrix_row(B, 1) == [4, 5, 6]
+    assert matrix_row(C, 2) == [1, 2]
+
+
 # def test_matrix_col():
 #     """
 #            0 1  <- rows
