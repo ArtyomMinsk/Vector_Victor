@@ -21,11 +21,8 @@ def vector_sub(vector_1, vector_2):
         return [vector_1[index] - vector_2[index] for index in range(len(vector_1))]
 
 def vector_sum(*args):
-    # if shape(args) != shape(args):
-    #     raise ShapeError
-    # else:
     return [sum(values) for values in zip(*args)]
 
-# def dot(vector_1, vector_2):
-#
-#     return [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
+def dot(vector_1, vector_2):
+    num_sum = [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
+    return sum(num_sum)
