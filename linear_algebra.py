@@ -2,11 +2,19 @@ class ShapeError(Exception):
     pass
 
 
-def shape(vector):
-    num_rows = len(vector)
-    tup = tuple([num_rows])
 
-    return tup
+def shape(vector):
+    if check_matrix_shape(vector):
+        dimension = tuple([len(vector), len(vector[0])])
+        return dimension
+    else:
+        num_rows = len(vector)
+        tup = tuple([num_rows])
+        return tup
+
+    #matrix
+    # dimension = tuple([len(matrix), len(matrix[0])])
+    # return tup
 
 def vector_add(vector_1, vector_2):
     if shape(vector_1) != shape(vector_2):
@@ -45,3 +53,9 @@ def vector_mean(*args):
 def magnitude(vector):
     value_sum = sum([vector[index] ** 2 for index in range(len(vector))])
     return value_sum ** 0.5
+
+# ADVANCED MODE
+
+def check_matrix_shape(matrix):
+    if type(matrix[0]) == list:
+        return True
