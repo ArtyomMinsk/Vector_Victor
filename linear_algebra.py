@@ -41,3 +41,7 @@ def vector_multiply(vector, number):
 
 def vector_mean(*args):
     return [sum(value) / len(value) for value in zip(*args)]
+
+def magnitude(vector):
+    value_sum = sum([vector[index] ** 2 for index in range(len(vector))])
+    return value_sum ** 0.5
