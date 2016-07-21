@@ -2,7 +2,6 @@ class ShapeError(Exception):
     pass
 
 
-
 def shape(vector):
     if check_matrix_shape(vector):
         dimension = tuple([len(vector), len(vector[0])])
@@ -11,10 +10,6 @@ def shape(vector):
         num_rows = len(vector)
         tup = tuple([num_rows])
         return tup
-
-    #matrix
-    # dimension = tuple([len(matrix), len(matrix[0])])
-    # return tup
 
 def vector_add(vector_1, vector_2):
     if shape(vector_1) != shape(vector_2):
@@ -41,8 +36,8 @@ def dot(vector_1, vector_2):
     if not compare_shapes(vector_1, vector_2):
         raise ShapeError
     else:
-        num_sum = [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
-        return sum(num_sum)
+        num_mult = [vector_1[index] * vector_2[index] for index in range(len(vector_1))]
+        return sum(num_mult)
 
 def vector_multiply(vector, number):
     return [vector[index] * number for index in range(len(vector))]
